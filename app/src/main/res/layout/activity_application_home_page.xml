@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ApplicationHomePage">
+
+
+
+    <FrameLayout
+
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btmnavview"
+        />
+
+
+    <!-- App Name -->
+    <TextView
+
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Riding"
+        android:typeface="serif"
+        android:textStyle="bold|italic"
+        android:textSize="24sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:layout_alignParentTop="true" />
+
+    <!-- ScrollView for the rest of the content -->
+
+
+    <ScrollView
+        android:id="@+id/scrollbar"
+        android:layout_marginBottom="100dp"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/app_name"
+        android:layout_marginTop="-2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <!-- SearchView -->
+
+
+                <androidx.cardview.widget.CardView
+android:id="@+id/searchviewcardview"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp">
+
+                    <SearchView
+                        android:id="@+id/search_view"
+                        android:layout_width="247dp"
+
+                        android:layout_height="58dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@color/white"
+
+                        android:gravity="center_vertical"
+
+                        android:iconifiedByDefault="false"
+                        android:queryHint="Where do you want to go"
+
+                        android:text="adfadsf" />
+
+
+                </androidx.cardview.widget.CardView>
+
+                <!-- Set for Later Button -->
+                <Button
+                    android:id="@+id/bookforlaterbutton"
+                    android:text="Book for later"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="05dp"
+                    android:backgroundTint="#E3E0E0" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <!-- Suggestions Title -->
+                <TextView
+                    android:id="@+id/suggestions_title"
+                    android:layout_width="241dp"
+                    android:layout_height="wrap_content"
+
+                    android:padding="16dp"
+                    android:text="Suggestions"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <!-- See All Button -->
+                <TextView
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:id="@+id/see_all_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:drawableRight="@drawable/baseline_navigate_next_24"
+                    android:text="See All" />
+
+            </LinearLayout>
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alignmentMode="alignMargins"
+                android:columnCount="4"
+                android:columnOrderPreserved="false"
+                android:padding="10dp"
+                android:rowCount="4"
+                android:useDefaultMargins="true">
+
+                <!-- Item 1 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/shorttrip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <!-- Content for Item 1 -->
+                    <LinearLayout
+                        android:id="@+id/llshort"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="#F4EFEF"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:src="@drawable/shorttrip"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            />
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Short trip"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 2 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/longtrip"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <!-- Content for Item 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F4EFEF"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/longtrip" />
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Long trip"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 3 -->
+                <androidx.cardview.widget.CardView android:id="@+id/rent"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <!-- Content for Item 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F4EFEF"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/rentcar" />
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+
+                            android:text="Rent"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Item 4 -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/packg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    app:cardCornerRadius="8dp">
+
+                    <!-- Content for Item 4 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#F4EFEF"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="80dp"
+                            android:src="@drawable/pckg"
+
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+
+                        <TextView
+                            style="@style/TextAppearance.Material3.BodyLarge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Package"
+                            android:textColor="@color/black"
+                            android:textStyle="bold"
+                            android:typeface="serif" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Add more items as needed -->
+
+            </GridLayout>
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <!-- Item 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/shortridegride"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:layout_marginRight="20dp"
+                        android:background="#FFFCFC"
+                        app:cardCornerRadius="8dp">
+
+                        <!-- Content for Item 1 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#FFFCFC"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="279dp"
+                                android:layout_height="134dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ridereq" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/baseline_navigate_next_24"
+                                android:text="Request short ride"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Find your comfortable rider"
+                                android:textColor="#575454"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Item 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/premiergrid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="200dp"
+                        android:background="#FFFCFC"
+                        app:cardCornerRadius="8dp">
+
+                        <!-- Content for Item 2 -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="#FFFCFC"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="279dp"
+                                android:layout_height="134dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/premiumrider" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:drawableRight="@drawable/baseline_navigate_next_24"
+                                android:text="Request premier"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Get the best riders"
+                                android:textColor="#575454"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Have more features with your ride"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="5dp"
+                android:typeface="serif"
+                />
+            <!-- ViewPager -->
+
+            <HorizontalScrollView
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/plantrip"
+                        app:cardBackgroundColor="#F8F0F0"
+
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+
+                        app:cardCornerRadius="15dp">
+
+                        <!-- Content for Item 1 -->
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:layout_width="382dp"
+                                android:layout_height="134dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/demandingcab" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="Plan your trip"
+                                android:drawableRight="@drawable/baseline_navigate_next_24"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="Book your time for our ride"
+
+                                android:textColor="#575454"
+                                android:textStyle="bold"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/grouptravel"
+                        android:layout_marginLeft="10dp"
+                        app:cardBackgroundColor="#F8F0F0"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+
+                        app:cardCornerRadius="8dp">
+
+                        <!-- Content for Item 1 -->
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/rvimg"
+                                android:layout_width="382dp"
+                                android:layout_height="134dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/gridgrouptravel" />
+
+                            <TextView
+                                android:id="@+id/rvtxt1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="Schedule your travelling time"
+                                android:drawableRight="@drawable/baseline_navigate_next_24"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+                            <TextView
+                                android:id="@+id/rvtxt2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="Find your travel guide rider"
+
+                                android:textColor="#575454"
+                                android:textStyle="bold"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/joinus"
+                        android:layout_marginLeft="10dp"
+                        app:cardBackgroundColor="#F8F0F0"
+                        android:padding="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+
+                        app:cardCornerRadius="8dp">
+
+                        <!-- Content for Item 1 -->
+                        <LinearLayout
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+
+                                android:layout_width="382dp"
+                                android:layout_height="134dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/joinus" />
+
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="Ready?Then let's be one of us"
+                                android:drawableRight="@drawable/baseline_navigate_next_24"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:typeface="serif" />
+                            <TextView
+
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:text="Ride with us"
+
+                                android:textColor="#575454"
+                                android:textStyle="bold"
+                                />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!-- FrameLayout to act as the container for fragments -->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:layout_width="match_parent"
+        android:id="@+id/btmnavview"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:menu="@menu/bottomnavigationview"/>
+</RelativeLayout>

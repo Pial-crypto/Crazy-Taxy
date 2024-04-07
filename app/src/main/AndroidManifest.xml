@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Uber"
+        tools:targetApi="31">
+
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCU3le9hW6Vs9Ezmxic7YfcqIMojy0GJfQ" />
+
+        <activity
+            android:name=".Mapsactivityairport"
+            android:exported="false"
+            android:label="@string/title_activity_mapsactivityairport" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".AirportActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".DataUsageAnalytics"
+            android:exported="false" />
+        <activity
+            android:name=".FeedbackandSupport"
+            android:exported="false" />
+        <activity
+            android:name=".securitymeasures"
+            android:exported="false" />
+        <activity
+            android:name=".DataCollectionandDeletion"
+            android:exported="false" />
+        <activity
+            android:name=".Datacollentionandusage"
+            android:exported="false" />
+        <activity
+            android:name=".MapsActivity3"
+            android:exported="true"
+            android:label="@string/title_activity_maps3" />
+        <activity
+            android:name=".termsandpolicy"
+            android:exported="false" />
+        <activity
+            android:name=".EditProfile"
+            android:exported="false" />
+        <activity
+            android:name=".timebooking"
+            android:exported="false" />
+        <activity
+            android:name=".toprider"
+            android:exported="false" />
+        <activity
+            android:name=".Grouptravel"
+            android:exported="false" />
+        <activity
+            android:name=".uberpremier"
+            android:exported="false" />
+        <activity
+            android:name=".packageinstruction"
+            android:exported="false" />
+        <activity
+            android:name=".rentalinstructions"
+            android:exported="false" />
+        <activity
+            android:name=".MapsActivityrental"
+            android:exported="false"
+            android:label="@string/title_activity_maps_activityrental" />
+        <activity
+            android:name=".MapsActivitypackages"
+            android:exported="true"
+            android:label="@string/title_activity_maps_activitypackages" />
+        <activity
+            android:name=".MapsActivity2"
+            android:exported="true"
+            android:label="@string/title_activity_maps2" />
+
+        <service
+            android:name=".PushNotification"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".FCMservice"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".SignInActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".selectingfromtodestinaiton"
+            android:exported="false" />
+        <activity
+            android:name=".accountinformationactivity"
+            android:exported="false" />
+        <activity
+            android:name=".Settings"
+            android:exported="true" />
+        <activity
+            android:name=".PickedUp"
+            android:exported="false" />
+        <activity
+            android:name=".Account"
+            android:exported="false" />
+        <activity
+            android:name=".Services"
+            android:exported="false" />
+        <activity
+            android:name=".ApplicationHomePage"
+            android:exported="true">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+
+
+        </activity>
+    </application>
+
+</manifest>

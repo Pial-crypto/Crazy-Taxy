@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        android:padding="16dp">
+
+        <!-- TextView to indicate the status of requests -->
+        <Button
+            android:visibility="invisible"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:drawableLeft="@drawable/back" />
+
+        <TextView
+            android:text="Activities"
+
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:id="@+id/textViewStatus"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="30dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+
+            android:layout_marginBottom="16dp"
+            />
+
+        <TextView
+            android:text="Activities"
+            android:id="@+id/ifhistoryexists"
+            android:layout_marginTop="5dp"
+
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:textSize="15dp"
+            android:textColor="#877E7E"
+            android:textStyle="bold"
+
+            android:layout_marginBottom="16dp"
+            />
+
+
+        <!-- RecyclerView to display requests -->
+        <androidx.recyclerview.widget.RecyclerView android:layout_marginTop="30dp"
+            android:id="@+id/recyclerViewhistories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:clipChildren="false"
+            android:background="@android:color/white"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#E1D3D3"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- TextViews to display request details -->
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/textViewRequestId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trip id:"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView  android:textColor="@color/black"  android:textStyle="bold"
+        android:id="@+id/textdrivername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Drivers name:"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView  android:textColor="@color/black"  android:textStyle="bold"
+        android:id="@+id/textViewpickuplocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick up from:"
+        android:layout_marginBottom="8dp"
+        />
+    <TextView  android:textColor="@color/black"  android:textStyle="bold"
+        android:id="@+id/textViewdestination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Destination:"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView  android:textColor="@color/black"  android:textStyle="bold"
+        android:id="@+id/textViewTimestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        android:layout_marginBottom="8dp"
+        />
+    <TextView  android:textColor="@color/black"  android:textStyle="bold"
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Driver's phone:"
+        android:layout_marginBottom="8dp"
+        />
+
+    <TextView android:textColor="@color/black"  android:textStyle="bold"
+        android:id="@+id/textViewprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Price:" />
+
+    <TextView
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:id="@+id/reachedornot"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Status:" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Rate your rider"
+    android:layout_gravity="center"/>
+    <RatingBar
+android:id="@+id/Ratingbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/black"/>
+
+</LinearLayout>

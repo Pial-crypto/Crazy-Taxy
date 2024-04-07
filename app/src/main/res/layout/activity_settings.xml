@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Settings"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:orientation="vertical">
+
+    <!-- Back Button -->
+
+    <!-- Profile Picture -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="16dp"
+        android:src="@drawable/back" />
+
+    <LinearLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Profile Picture ImageView (Replace with your ShapeableImageView) -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@color/black"
+
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.Circle" />
+
+        <!-- Details Layout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="16dp">
+
+            <!-- Name EditText -->
+            <TextView
+                android:id="@+id/name_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"/>
+
+            <!-- Number EditText -->
+            <TextView
+                android:id="@+id/number_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Number"/>
+
+            <!-- Email EditText -->
+            <TextView
+                android:id="@+id/email_edittext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="App settings"
+        android:typeface="sans"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:textStyle="bold"
+        android:textSize="25dp"/>
+
+    <!-- Add Home, Add Work, Dark Mode Buttons -->
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <!-- Add Home Button
+
+        <Button   android:gravity="center_vertical"
+            android:backgroundTint="@color/white"  android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/baseline_home_24"
+            android:id="@+id/add_home_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Add home"/>
+-->
+        <!-- Add Work Button
+        <Button    android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:layout_gravity="start|center"
+            android:drawableLeft="@drawable/baseline_add_home_work_24"
+            android:gravity="center_vertical"
+ android:layout_marginTop="10dp"
+            android:id="@+id/add_work_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Add work"/>
+-->
+        <Switch
+            android:id="@+id/dark_mode_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginTop="10dp"
+            android:text="       Dark Mode"
+            android:textColor="@color/black"
+            android:thumb="@drawable/dark"
+            android:track="@drawable/baseline_light_mode_24" />
+
+    </LinearLayout>
+
+    <!-- Sign Out Button -->
+    <LinearLayout
+        android:id="@+id/signout_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <!-- Light Shadow Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@android:color/darker_gray"
+            android:alpha="0.5"/>
+
+        <!-- Sign Out TextView -->
+        <TextView
+
+            android:id="@+id/signout_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Sign Out"
+            android:textColor="@android:color/holo_red_light"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AirportDropoffragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <TextView     android:textColor="@color/black"
+
+        android:id="@+id/time"
+        android:gravity="center"
+
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/baseline_access_time_24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:layout_marginTop="15dp"
+        android:drawableRight="@drawable/baseline_navigate_next_24"/>
+
+    <!-- Destination EditText -->
+
+    <!-- Text "Committed to serving you" -->
+
+    <Button
+        android:id="@+id/select_vehicle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="105dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="248dp"
+        android:backgroundTint="@color/black"
+        android:text="Select Vehicle" />
+
+    <TextView
+        android:drawableRight="@drawable/baseline_navigate_next_24"
+        android:id="@+id/pickUpTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time"
+        android:gravity="start"
+        android:layout_marginTop="16dp"
+android:textColor="@color/black"
+        android:text="Pickup From"
+android:textStyle="bold"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="31dp"
+        android:layout_below="@id/pickUpTextView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+      android:id="@+id/pricetextview"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="283dp"
+        android:gravity="start"
+        android:text="Price"
+        android:textStyle="bold" />
+    <TextView
+        android:layout_width="98dp"
+        android:layout_height="31dp"
+        android:layout_below="@id/pricetextview"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/distancetextview"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="283dp"
+        android:gravity="start"
+        android:text="Distance"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/descriptonEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/distancetextview"
+
+        android:layout_marginTop="10dp"
+        android:hint="Enter description or note for rider" />
+
+    <TextView
+
+        android:textStyle="bold"
+        android:id="@+id/committedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Committed to serving you"
+        android:textSize="25dp"
+        android:layout_marginTop="16dp"
+        android:layout_below="@id/descriptonEditText"
+        android:layout_centerHorizontal="true" />
+
+    <!-- Grid Layout -->
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/committedTextView"
+        android:layout_marginTop="15dp"
+        android:background="#ECE4E4"
+        android:columnCount="3"
+        android:padding="16dp"
+        android:rowCount="2">
+
+        <!-- First Row -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/care" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Care"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/charging" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Charger"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/luggage" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Luggage"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <!-- Second Row -->
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/water" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout   android:layout_marginTop="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/music" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Music"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout   android:layout_marginTop="15dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/music" />
+
+            <TextView
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/on_time_airport_arrival_guarantee"
+                android:layout_marginTop="10dp"/>
+
+        </LinearLayout>
+
+        <!-- Repeat similar layout for additional items -->
+    </GridLayout>
+    <Button
+        android:id="@+id/confirm"
+        android:text="Confirm"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/grid"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+    <!-- Navigation View and Pick Up TextView -->

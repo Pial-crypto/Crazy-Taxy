@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".PrivacyandDatafragment"
+    android:padding="16dp">
+
+    <!-- Back Button -->
+
+
+    <!-- Privacy Settings -->
+
+    <Button
+
+        android:id="@+id/manageyouraccount"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/black"
+        android:gravity="center"
+        android:text="Manage account"
+        android:textColor="@color/white" />
+
+
+
+    <!-- Data Collection and Usage -->
+    <TextView
+        android:drawableRight="@drawable/baseline_navigate_next_24"
+        android:id="@+id/data_collection_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Collection and Usage"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/manageyouraccount"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onDataCollectionClicked"/>
+
+    <!-- Data Access and Deletion -->
+    <TextView         android:drawableRight="@drawable/baseline_navigate_next_24"
+        android:id="@+id/data_access_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Access and Deletion"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/data_collection_title"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onDataAccessClicked"/>
+
+    <!-- Privacy Policy and Terms of Service -->
+    <TextView         android:drawableRight="@drawable/baseline_navigate_next_24"
+        android:id="@+id/privacy_policy_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Privacy Policy and Terms of Service"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/data_access_title"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onPrivacyPolicyClicked"/>
+
+    <!-- Feedback and Support -->
+    <TextView         android:drawableRight="@drawable/baseline_navigate_next_24"
+        android:id="@+id/feedback_support_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Feedback and Support"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/privacy_policy_title"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onFeedbackSupportClicked"/>
+
+    <!-- Security Measures -->
+    <TextView         android:drawableRight="@drawable/baseline_navigate_next_24"
+        android:id="@+id/security_measures_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Security Measures"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/feedback_support_title"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onSecurityMeasuresClicked"/>
+
+
+    <!-- Data Usage Analytics -->
+    <TextView         android:drawableRight="@drawable/baseline_navigate_next_24"
+        android:id="@+id/data_usage_analytics_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Usage Analytics"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:layout_below="@id/security_measures_title"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:onClick="onDataUsageAnalyticsClicked"/>
+
+</RelativeLayout>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    tools:context=".Accountinfofragmentinsideaccountactivity">
+
+    <!-- Profile Picture Section -->
+    <ImageView
+
+        android:adjustViewBounds="true"
+        android:src="@drawable/blankpp"
+        android:id="@+id/profileImageView"
+        android:layout_width="135dp"
+        android:layout_height="135dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+
+        android:scaleType="centerCrop"
+
+        android:clickable="true"
+        />
+
+    <!-- Edit Picture Button -->
+    <Button
+        android:id="@+id/editPictureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profileImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/black"
+        android:text="Edit Profile Picture" />
+
+    <Button
+        android:id="@+id/removePictureButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/editPictureButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#DA032E"
+        android:text="Remove Profile Picture" />
+
+    <!-- Edit Password Section -->
+
+    <!-- Edit Phone Section -->
+
+
+
+    <!--Editing name-->
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/nameEditText"
+        android:padding="10dp"
+        android:background="#85B65A"
+        android:layout_below="@id/removePictureButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+
+            android:background="#85B65A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="333dp"
+
+                android:layout_height="match_parent"
+                android:hint="Enter your name"
+                android:background="#A2F4A6">
+
+                <!-- TextInputEditText without textPassword input type -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/nameedit"
+                    android:layout_width="333dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:clickable="false"
+                    android:focusable="false"
+
+                    android:focusableInTouchMode="false"
+                    android:padding="8dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Icon/Button on the left -->
+            <ImageButton
+
+                android:clickable="true"
+                android:id="@+id/editButtonname"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_edit_24"
+                android:background="?android:attr/selectableItemBackground"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:background="#85B65A" android:padding="10dp"
+        android:id="@+id/passwordEditText"
+        android:layout_below="@id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+
+            android:background="#85B65A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+
+                android:layout_width="333dp"
+                app:passwordToggleEnabled="true"
+                android:layout_height="match_parent"
+                android:hint="Enter your new password"
+                android:background="#99EA9D"
+
+                >
+
+                <!-- TextInputEditText -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/passedit"
+
+                    android:layout_width="333dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+                    android:inputType="textPassword"
+                    android:padding="8dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Icon/Button on the left -->
+            <ImageButton
+                android:clickable="true"
+                android:id="@+id/editButtonpassword"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_edit_24"
+                android:background="?android:attr/selectableItemBackground"/>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+android:padding="10dp"
+        android:id="@+id/confirmpasswordEditText"
+        android:layout_below="@id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:background="#85B65A"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="333dp"
+                android:layout_height="match_parent"
+                android:hint="Confirm Password"
+                android:background="#95E399"
+                app:passwordToggleEnabled="true"
+                >
+
+                <!-- TextInputEditText -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/confirmpassedit"
+                    android:layout_width="333dp"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+
+
+
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+                    android:inputType="textPassword"
+                    android:padding="8dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Icon/Button on the left -->
+            <ImageButton
+
+                android:clickable="true"
+                android:id="@+id/editButtonconfirmpass"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_edit_24"
+                android:background="?android:attr/selectableItemBackground"/>
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/phone"
+android:padding="10dp"
+        android:layout_below="@id/confirmpasswordEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:background="#85B65A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="333dp"
+                android:layout_height="match_parent"
+                android:hint="Enter your new  phone number"
+
+
+                >
+
+                <!-- TextInputEditText -->
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="8dp"
+                    android:background="#95E399"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+
+
+                    android:inputType="phone"
+                    android:padding="8dp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <!-- Icon/Button on the left -->
+            <ImageButton
+                android:background="#85B65A"
+                android:clickable="true"
+                android:id="@+id/editButtonphone"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/baseline_edit_24"
+                />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+    <!-- Save Button -->
+    <Button
+        android:backgroundTint="@color/black"
+        android:id="@+id/saveButton"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:layout_marginLeft="115dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/phone"
+        android:layout_marginTop="24dp"
+        android:text="Save Changes" />
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

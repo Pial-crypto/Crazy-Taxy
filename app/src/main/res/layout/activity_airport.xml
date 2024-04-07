@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:padding="15dp"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".AirportActivity">
+<ImageButton
+    android:id="@+id/backbutton"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@drawable/back"
+    android:backgroundTint="@color/white"/>
+    <!-- Title TextView -->
+    <TextView
+
+        android:gravity="center"
+
+        android:id="@+id/titleTextView"
+        android:layout_width="281dp"
+        android:layout_height="44dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="Airport Pickup / Dropoff Service"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+<FrameLayout
+    android:id="@+id/fragment_containerforairport"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/titleTextView"
+    android:layout_above="@id/btmnavviewairport"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmnavviewairport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        app:itemActiveIndicatorStyle="@color/black"
+app:menu="@menu/airportpicupordropmenu"
+
+        />
+
+
+</RelativeLayout>

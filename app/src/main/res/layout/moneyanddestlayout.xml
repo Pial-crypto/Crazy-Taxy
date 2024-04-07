@@ -1,0 +1,64 @@
+<!-- layout_bottom_sheet.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textViewDistance"
+        android:layout_width="109dp"
+        android:layout_height="71dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shapeviewformoneyanddestinaiton"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Total Distance"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewMoney"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shapeviewformoneyanddestinaiton"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Total Money"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/fromtoto"
+        android:layout_width="145dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:background="@drawable/shapeviewformoneyanddestinaiton"
+        android:gravity="center"
+        android:paddingStart="16dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="8dp"
+        android:text="Total Money"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+    <Button
+        android:text="Ok lets go"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"/>
+
+</LinearLayout>

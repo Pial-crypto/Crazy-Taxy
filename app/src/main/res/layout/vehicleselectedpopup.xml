@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:weightSum="3"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <Button
+
+android:drawableBottom="@drawable/baseline_electric_bike_24"
+        android:textColor="@color/white"
+        android:backgroundTint="#EFB3B3"
+        android:id="@+id/bike_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Bike" />
+
+    <Button  android:backgroundTint="#EFB3B3"
+        android:drawableBottom="@drawable/baseline_electric_car_24"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/white"
+        android:id="@+id/private_car_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Private Car" />
+
+    <Button     android:backgroundTint="#EFB3B3" android:layout_marginLeft="5dp"  android:textColor="@color/white"
+        android:id="@+id/cng_button"
+        android:layout_width="0dp"
+        android:drawableBottom="@drawable/baseline_electric_car_24"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="CNG" />
+
+</LinearLayout>

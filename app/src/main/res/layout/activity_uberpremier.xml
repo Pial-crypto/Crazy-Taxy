@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".uberpremier"
+
+
+    android:layout_height="match_parent">
+
+    <!-- Lottie Animation -->
+
+    <!-- Bold TextView -->
+
+    <ImageView
+        android:id="@+id/animationView"
+        android:layout_width="match_parent"
+        android:layout_height="354dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/premride" />
+
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/boldTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/animationView"
+        android:layout_marginTop="20dp"
+        style="@style/Base.CardView"
+        android:textColor="@color/black"
+        android:text="Try premier"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <!-- First Small TextView -->
+    <TextView
+        android:layout_marginLeft="15dp"
+        android:id="@+id/smallTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/boldTextView"
+        android:layout_marginTop="30dp"
+        android:text="Ride with our premier features and best vehicles"
+        android:textSize="14sp" />
+
+    <!-- Second Small TextView -->
+    <TextView
+        android:id="@+id/smallTextView2"
+        android:layout_width="384dp"
+        android:layout_height="47dp"
+        android:layout_below="@id/smallTextView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:text="We are always working hard to provde you the best vehicles and riders.Also ensuring the best conduct is our motive"
+        android:textSize="14sp" />
+
+    <!-- Button at the bottom -->
+    <Button
+        android:backgroundTint="@color/black"
+
+        android:id="@+id/bottomButton"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="Start premier" />
+
+</RelativeLayout>

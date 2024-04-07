@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/country_code_usa"
+        android:title="United States (+1)" />
+    <item
+        android:id="@+id/country_code_india"
+        android:title="India (+91)" />
+    <item
+        android:id="@+id/country_code_china"
+        android:title="China (+86)" />
+    <item
+        android:id="@+id/country_code_japan"
+        android:title="Japan (+81)" />
+    <item
+        android:id="@+id/country_code_bangladesh"
+        android:title="Bangladesh (+880)" />
+</menu>
